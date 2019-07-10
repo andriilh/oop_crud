@@ -6,7 +6,7 @@
 		}
 	</style>
 	<div class="container">
-		<a href=<?php echo $db->base_url().'insert.php' ?> class="btn btn-primary" style="margin-bottom: 10px"> + Tambah Data</a>
+		<a href=<?php echo $db->base_url() . 'insert.php' ?> class="btn btn-primary" style="margin-bottom: 10px"> + Tambah Data</a>
 		<table class="table table-bordered table-stripped table-hover">
 			<thead>
 				<tr>
@@ -25,23 +25,22 @@
 				$mhs = $db->getMahasiswa()->get_result();
 				while ($data_mhs = $mhs->fetch_object()) {
 
-				 ?>
+					?>
 
-				<tr>
-					<td align="center" style="vertical-align: middle;"><?= $no; ?></td>
-					<td style="vertical-align: middle;"><?= $data_mhs->nama; ?></td>
-					<td style="vertical-align: middle;"><?= $data_mhs->email; ?></td>
-					<td align="center" style="vertical-align: middle;"><?= $data_mhs->email; ?></td>
-					<td style="vertical-align: middle;"><?= $data_mhs->tgl_lahir; ?></td>
-					<td style="vertical-align: middle;"><?= $data_mhs->kelas; ?></td>
-					<td style="vertical-align: middle;"><a href="update.php" class="btn btn-success btn-sm">Edit</a></td>
-					<td style="vertical-align: middle;"><a href="#" class="btn btn-danger btn-sm">Hapus</a></td>
-				</tr>
-				
-				<?php 
+					<tr>
+						<td align="center" style="vertical-align: middle;"><?= $no; ?></td>
+						<td style="vertical-align: middle;"><?= $data_mhs->nama; ?></td>
+						<td style="vertical-align: middle;"><?= $data_mhs->email; ?></td>
+						<td style="vertical-align: middle;"><?= $data_mhs->tgl_lahir; ?></td>
+						<td style="vertical-align: middle;"><?= $data_mhs->kelas; ?></td>
+						<td style="vertical-align: middle;"><a href="update.php" class="btn btn-success btn-sm">Edit</a></td>
+						<td style="vertical-align: middle;"><a href="#" class="btn btn-danger btn-sm">Hapus</a></td>
+					</tr>
+
+					<?php
 					$no++;
 				}
-				 ?>
+				?>
 
 			</tbody>
 		</table>

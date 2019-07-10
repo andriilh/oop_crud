@@ -2,7 +2,7 @@
 <section>
 	<h2 style="text-align: center;">Tambah Data Mahasiswa</h2>
 	<div class="container">
-		<form class="form" action="#" method="post">
+		<form class="form" action="<?php echo $db->base_url() . 'process/Process.php? kode=insert'; ?>" method="post">
 			<div class="form-group">
 				<label for="nama">Nama :</label>
 				<input class="form-control" type="text" name="nama" id="nama" placeholder="Nama Mahasiswa" required>

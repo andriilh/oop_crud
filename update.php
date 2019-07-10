@@ -1,5 +1,7 @@
-<?php include 'header.php'; 
-
+<?php include 'header.php';
+if (isset($_GET['id'])) {
+	// $result = $db->getMahasiswa_byId()
+}
 ?>
 <section>
 	<h2 style="text-align: center;">Edit Data Mahasiswa</h2>
